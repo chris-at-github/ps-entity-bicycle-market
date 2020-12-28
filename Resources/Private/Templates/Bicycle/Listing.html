@@ -3,15 +3,35 @@
 
 <f:section name="Main">
 	<f:flashMessages/>
-	<f:render section="Listing" arguments="{_all}" />
+
+	<f:if condition="{bicycles}">
+		<f:render section="Listing" arguments="{_all}" />
+	</f:if>
 </f:section>
 
 <f:section name="Listing">
-	<f:flashMessages/>
+	<div class="row">
+		<f:for each="{bicycles}" as="bicycle">
+			<div class="col-12 col-md-6">
+				<f:render section="Item" arguments="{_all}" />
+			</div>
+		</f:for>
+	</div>
+</f:section>
 
-	<f:for each="{bicycles}" as="bicycle">
-		<f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.brand}</f:link.action>
-	</f:for>
+<f:section name="Item">
+	<div>
+		<f:render partial="Components/Media" section="Picture" arguments="{
+			file: bicycle.media.0,
+			image: {maxWidth: 700, cropVariant: 'listing'},
+			sizes: {
+				0: {maxWidth: 485, mediaQuery: '(min-width: 768px)', cropVariant: 'listing'},
+				1: {maxWidth: 700, mediaQuery: '(min-width: 1px)', cropVariant: 'listing'}
+			}
+		}" />
+	</div>
 
+	<div><f:link.action action="show" arguments="{bicycle: bicycle}">{bicycle.title}</f:link.action></div>
+	<div>{bicycle.brand}</div>
 </f:section>
 </html>
