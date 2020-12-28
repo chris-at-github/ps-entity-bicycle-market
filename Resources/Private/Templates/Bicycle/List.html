@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Bicycle:
+          List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <h1>Listing for Bicycle</h1>
+
+    <f:flashMessages />
+
+    <table  class="tx_entitybicyclemarket" >
+        <tr>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.brand" /></th>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition" /></th>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.condition_description" /></th>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.service_condition" /></th>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.frame_size" /></th>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.wheel_size" /></th>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.price" /></th>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis" /></th>
+            <th><f:translate key="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee" /></th>
+            <th> </th>
+            <th> </th>
+        </tr>
+
+        <f:for each="{bicycles}" as="bicycle">
+            <tr>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.brand}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.condition}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.conditionDescription}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.serviceCondition}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.frameSize}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.wheelSize}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.price}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.priceNegotiationBasis}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{bicycle : bicycle}">{bicycle.manufacturerGuarantee}</f:link.action></td>
+                <td><f:link.action action="edit" arguments="{bicycle : bicycle}">Edit</f:link.action></td>
+                <td><f:link.action action="delete" arguments="{bicycle : bicycle}">Delete</f:link.action></td>
+            </tr>
+        </f:for>
+    </table>
+
+    <f:link.action action="new">New Bicycle</f:link.action>
+</f:section>
+</html>

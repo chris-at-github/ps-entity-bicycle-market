@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang_csh" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market">
+		<header/>
+		<body>
+			<trans-unit id="brand.description" resname="brand.description">
+				<source>brand</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_condition.description" resname="tx_entitybicyclemarket_condition.description">
+				<source>condition</source>
+			</trans-unit>
+			<trans-unit id="condition_description.description" resname="condition_description.description">
+				<source>conditionDescription</source>
+			</trans-unit>
+			<trans-unit id="service_condition.description" resname="service_condition.description">
+				<source>serviceCondition</source>
+			</trans-unit>
+			<trans-unit id="frame_size.description" resname="frame_size.description">
+				<source>frameSize</source>
+			</trans-unit>
+			<trans-unit id="wheel_size.description" resname="wheel_size.description">
+				<source>wheelSize</source>
+			</trans-unit>
+			<trans-unit id="price.description" resname="price.description">
+				<source>price</source>
+			</trans-unit>
+			<trans-unit id="price_negotiation_basis.description" resname="price_negotiation_basis.description">
+				<source>priceNegotiationBasis</source>
+			</trans-unit>
+			<trans-unit id="manufacturer_guarantee.description" resname="manufacturer_guarantee.description">
+				<source>manufacturerGuarantee</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

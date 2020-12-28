@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang_db" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market">
+		<header/>
+		<body>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle" resname="tx_entitybicyclemarket_domain_model_bicycle">
+				<source>Bicycle</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.brand" resname="tx_entitybicyclemarket_domain_model_bicycle.brand">
+				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition">
+				<source>Condition</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.condition_description" resname="tx_entitybicyclemarket_domain_model_bicycle.condition_description">
+				<source>Condition Description</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.service_condition" resname="tx_entitybicyclemarket_domain_model_bicycle.service_condition">
+				<source>Service Condition</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.frame_size" resname="tx_entitybicyclemarket_domain_model_bicycle.frame_size">
+				<source>Frame Size</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.wheel_size" resname="tx_entitybicyclemarket_domain_model_bicycle.wheel_size">
+				<source>Wheel Size</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.price" resname="tx_entitybicyclemarket_domain_model_bicycle.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis" resname="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis">
+				<source>Price Negotiation Basis</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee" resname="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee">
+				<source>Manufacturer Guarantee</source>
+			</trans-unit>
+			<trans-unit id="tx_entity_domain_model_entity.tx_extbase_type.Tx_EntityBicycleMarket_Bicycle" resname="tx_entity_domain_model_entity.tx_extbase_type.Tx_EntityBicycleMarket_Bicycle">
+				<source>Bicycle Market Bicycle</source>
+			</trans-unit>
+			<trans-unit id="tx_entity_bicycle_market_frontend.name" resname="tx_entity_bicycle_market_frontend.name">
+				<source>Bicycle Market (Frontend)</source>
+			</trans-unit>
+			<trans-unit id="tx_entity_bicycle_market_frontend.description" resname="tx_entity_bicycle_market_frontend.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

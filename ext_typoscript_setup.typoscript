@@ -1,0 +1,23 @@
+
+
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      Ps\Entity\Domain\Model\Entity {
+        subclasses {
+          Tx_EntityBicycleMarket_Bicycle = Ps\EntityBicycleMarket\Domain\Model\Bicycle
+          
+        }
+      }
+      Ps\EntityBicycleMarket\Domain\Model\Bicycle {
+        mapping {
+          tableName = tx_entity_domain_model_entity
+          recordType = Tx_EntityBicycleMarket_Bicycle
+        }
+      }
+
+    }
+  }
+}
