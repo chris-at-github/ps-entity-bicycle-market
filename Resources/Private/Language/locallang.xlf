@@ -3,35 +3,44 @@
 	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market">
 		<header/>
 		<body>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle" resname="tx_entitybicyclemarket_domain_model_bicycle">
+			<trans-unit id="bicycle" resname="bicycle">
 				<source>Bicycle</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.brand" resname="tx_entitybicyclemarket_domain_model_bicycle.brand">
+			<trans-unit id="bicycle.brand" resname="bicycle.brand">
 				<source>Brand</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition">
+			<trans-unit id="bicycle.condition" resname="bicycle.condition">
 				<source>Condition</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.condition_description" resname="tx_entitybicyclemarket_domain_model_bicycle.condition_description">
-				<source>Condition Description</source>
+			<trans-unit id="bicycle.condition.new" resname="bicycle.condition.new">
+				<source>New</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.service_condition" resname="tx_entitybicyclemarket_domain_model_bicycle.service_condition">
+			<trans-unit id="bicycle.condition.asNew" resname="bicycle.condition.asNew">
+				<source>As new</source>
+			</trans-unit>
+			<trans-unit id="bicycle.condition.used" resname="bicycle.condition.used">
+				<source>Used</source>
+			</trans-unit>
+			<trans-unit id="bicycle.serviceCondition" resname="bicycle.serviceCondition">
 				<source>Service Condition</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.frame_size" resname="tx_entitybicyclemarket_domain_model_bicycle.frame_size">
+			<trans-unit id="bicycle.frameSize" resname="bicycle.frameSize">
 				<source>Frame Size</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.wheel_size" resname="tx_entitybicyclemarket_domain_model_bicycle.wheel_size">
+			<trans-unit id="bicycle.wheelSize" resname="bicycle.wheelSize">
 				<source>Wheel Size</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.price" resname="tx_entitybicyclemarket_domain_model_bicycle.price">
+			<trans-unit id="bicycle.price" resname="bicycle.price">
 				<source>Price</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis" resname="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis">
-				<source>Price Negotiation Basis</source>
+			<trans-unit id="bicycle.priceNegotiationBasis" resname="bicycle.priceNegotiationBasis">
+				<source>Negotiation Basis</source>
 			</trans-unit>
-			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee" resname="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee">
+			<trans-unit id="bicycle.manufacturerGuarantee" resname="bicycle.manufacturerGuarantee">
 				<source>Manufacturer Guarantee</source>
+			</trans-unit>
+			<trans-unit id="bicycle.manufacturerGuarantee.available" resname="bicycle.manufacturerGuarantee.available">
+				<source>Available</source>
 			</trans-unit>
 		</body>
 	</file>

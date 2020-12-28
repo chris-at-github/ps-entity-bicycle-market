@@ -30,7 +30,7 @@ return [
 			'price' => [
 				'fieldName' => 'tx_entitybicyclemarket_price'
 			],
-			'manufacturerGarantee' => [
+			'manufacturerGuarantee' => [
 				'fieldName' => 'tx_entitybicyclemarket_manufacturer_guarantee'
 			],
 			'token' => [

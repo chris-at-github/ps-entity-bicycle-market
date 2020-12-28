@@ -1,24 +1,91 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+  <f:layout name="Default" />
 
-This Template is responsible for displaying a single view for a domain object
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Bicycle:
-          Show.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
-<f:section name="content">
-    <h1>Single View for Bicycle</h1>
-
+  <f:section name="Main">
     <f:flashMessages />
-    <f:render partial="Bicycle/Properties" arguments="{bicycle:bicycle}" />
-    <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Bicycle</f:link.action>
-</f:section>
+
+    <f:render section="Images" arguments="{bicycle: bicycle}" />
+    <f:render section="Header" arguments="{bicycle: bicycle}" />
+    <f:render section="Condition" arguments="{bicycle: bicycle}" />
+    <f:render section="Service" arguments="{bicycle: bicycle}" />
+    <f:render section="Price" arguments="{bicycle: bicycle}" />
+    <f:render section="Size" arguments="{bicycle: bicycle}" />
+  </f:section>
+
+  <f:section name="Images">
+    <f:for each="{bicycle.media}" as="image">
+      <div>
+        <f:render partial="Components/Media" section="Picture" arguments="{
+          file: image,
+          image: {maxWidth: 1000, cropVariant: 'fullsize'},
+          sizes: {
+            0: {maxWidth: 1000, mediaQuery: '(min-width: 768px)', cropVariant: 'fullsize'},
+            1: {maxWidth: 700, mediaQuery: '(min-width: 1px)', cropVariant: 'fullsize'}
+          }
+        }" />
+      </div>
+    </f:for>
+  </f:section>
+
+  <f:section name="Header">
+    <header>{bicycle.title}</header>
+
+    <f:if condition="{bicycle.brand}">
+      <div><f:translate key="bicycle.brand" />: {bicycle.brand}</div>
+    </f:if>
+  </f:section>
+
+  <f:section name="Condition">
+    <f:if condition="{bicycle.condition}">
+      <div>
+        <f:translate key="bicycle.condition" />: <f:translate key="bicycle.condition.{bicycle.condition}" />
+        <f:if condition="{bicycle.conditionDescription}">
+          <f:format.html>{bicycle.conditionDescription}</f:format.html>
+        </f:if>
+      </div>
+    </f:if>
+  </f:section>
+
+  <f:section name="Service">
+    <f:if condition="{bicycle.serviceCondition}">
+      <div>
+        <f:translate key="bicycle.serviceCondition" />: <f:format.html>{bicycle.serviceCondition}</f:format.html>
+      </div>
+    </f:if>
+
+    <f:if condition="{bicycle.manufacturerGuarantee}">
+      <div>
+        <f:translate key="bicycle.manufacturerGuarantee" />: <f:translate key="bicycle.manufacturerGuarantee.available" />
+      </div>
+    </f:if>
+  </f:section>
+
+  <f:section name="Price">
+    <f:if condition="{bicycle.priceNegotiationBasis}">
+      <f:then>
+        <div>
+          <f:translate key="bicycle.price" />: <f:translate key="bicycle.priceNegotiationBasis" />
+        </div>
+      </f:then>
+      <f:else if="{bicycle.price}">
+        <div>
+          <f:translate key="bicycle.price" />: <f:format.currency currencySign="€">{bicycle.price}</f:format.currency>
+        </div>
+      </f:else>
+    </f:if>
+  </f:section>
+
+  <f:section name="Size">
+    <f:if condition="{bicycle.frameSize}">
+      <div>
+        <f:translate key="bicycle.frameSize" />: {bicycle.frameSize}"
+      </div>
+    </f:if>
+
+    <f:if condition="{bicycle.wheelSize}">
+      <div>
+        <f:translate key="bicycle.wheelSize" />: {bicycle.wheelSize}"
+      </div>
+    </f:if>
+  </f:section>
 </html>
