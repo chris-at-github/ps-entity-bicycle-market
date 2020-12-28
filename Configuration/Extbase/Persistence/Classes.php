@@ -4,6 +4,7 @@ declare(strict_types=1);
 return [
 	\Ps\EntityBicycleMarket\Domain\Model\Bicycle::class => [
 		'tableName' => 'tx_entity_domain_model_entity',
+		'recordType' => \Ps\EntityBicycleMarket\Domain\Model\Bicycle::class,
 		'properties' => [
 			'brand' => [
 				'fieldName' => 'tx_entitybicyclemarket_brand'

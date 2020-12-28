@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace Ps\EntityBicycleMarket\Controller;
 
 
+use Ps\Entity\Controller\EntityController;
+
 /***
  *
  * This file is part of the "Bicycle Market" Extension for TYPO3 CMS.
@@ -14,46 +16,42 @@ namespace Ps\EntityBicycleMarket\Controller;
  *  (c) 2020 Christian Pschorr <pschorr.christian@gmail.com>
  *
  ***/
+
 /**
  * BicycleController
  */
-class BicycleController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
-{
+class BicycleController extends EntityController {
 
-    /**
-     * bicycleRepository
-     * 
-     * @var \Ps\EntityBicycleMarket\Domain\Repository\BicycleRepository
-     */
-    protected $bicycleRepository = null;
+	/**
+	 * bicycleRepository
+	 *
+	 * @var \Ps\EntityBicycleMarket\Domain\Repository\BicycleRepository
+	 */
+	protected $bicycleRepository = null;
 
-    /**
-     * @param \Ps\EntityBicycleMarket\Domain\Repository\BicycleRepository $bicycleRepository
-     */
-    public function injectBicycleRepository(\Ps\EntityBicycleMarket\Domain\Repository\BicycleRepository $bicycleRepository)
-    {
-        $this->bicycleRepository = $bicycleRepository;
-    }
+	/**
+	 * @param \Ps\EntityBicycleMarket\Domain\Repository\BicycleRepository $bicycleRepository
+	 */
+	public function injectBicycleRepository(\Ps\EntityBicycleMarket\Domain\Repository\BicycleRepository $bicycleRepository) {
+		$this->bicycleRepository = $bicycleRepository;
+	}
 
-    /**
-     * action list
-     * 
-     * @return void
-     */
-    public function listAction()
-    {
-        $bicycles = $this->bicycleRepository->findAll();
-        $this->view->assign('bicycles', $bicycles);
-    }
+	/**
+	 * action list
+	 *
+	 * @return void
+	 */
+	public function listingAction() {
+		$this->view->assign('bicycles', $this->bicycleRepository->findAll());
+	}
 
-    /**
-     * action show
-     * 
-     * @param \Ps\EntityBicycleMarket\Domain\Model\Bicycle $bicycle
-     * @return void
-     */
-    public function showAction(\Ps\EntityBicycleMarket\Domain\Model\Bicycle $bicycle)
-    {
-        $this->view->assign('bicycle', $bicycle);
-    }
+	/**
+	 * action show
+	 *
+	 * @param \Ps\EntityBicycleMarket\Domain\Model\Bicycle $bicycle
+	 * @return void
+	 */
+	public function showAction($bicycle) {
+		$this->view->assign('bicycle', $bicycle);
+	}
 }
