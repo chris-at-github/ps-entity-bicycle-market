@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang_db" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market">
+	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market">
 		<header/>
 		<body>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle" resname="tx_entitybicyclemarket_domain_model_bicycle">
+				<source>Bicycle</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.extbase_type" resname="tx_entitybicyclemarket_domain_model_bicycle.extbase_type">
 				<source>Bicycle</source>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.brand" resname="tx_entitybicyclemarket_domain_model_bicycle.brand">
@@ -11,6 +14,15 @@
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition">
 				<source>Condition</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.new" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.new">
+				<source>New</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.as_new" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.as_new">
+				<source>As new</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.used" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.used">
+				<source>Used</source>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.condition_description" resname="tx_entitybicyclemarket_domain_model_bicycle.condition_description">
 				<source>Condition Description</source>
@@ -32,6 +44,9 @@
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee" resname="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee">
 				<source>Manufacturer Guarantee</source>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.token" resname="tx_entitybicyclemarket_domain_model_bicycle.token">
+				<source>Token</source>
 			</trans-unit>
 			<trans-unit id="tx_entity_domain_model_entity.tx_extbase_type.Tx_EntityBicycleMarket_Bicycle" resname="tx_entity_domain_model_entity.tx_extbase_type.Tx_EntityBicycleMarket_Bicycle">
 				<source>Bicycle Market Bicycle</source>
