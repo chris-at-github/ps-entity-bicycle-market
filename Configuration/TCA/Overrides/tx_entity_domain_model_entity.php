@@ -10,11 +10,11 @@ if(isset($GLOBALS['TCA']['tx_entity_domain_model_entity']['columns']['tx_extbase
 // ---------------------------------------------------------------------------------------------------------------------
 // Neue Paletten
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_general'] = [
-	'showitem' => 'title, --linebreak--, tx_entitybicyclemarket_brand, --linebreak--, long_description, --linebreak--, media, '
+	'showitem' => 'title, --linebreak--, tx_entitybicyclemarket_brand, --linebreak--, media, '
 ];
 
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_condition'] = [
-	'showitem' => 'tx_entitybicyclemarket_condition, --linebreak--, tx_entitybicyclemarket_condition_description,'
+	'showitem' => 'tx_entitybicyclemarket_condition, --linebreak--, tx_entitybicyclemarket_condition_description, --linebreak--, tx_entitybicyclemarket_service_condition,'
 ];
 
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_size'] = [
@@ -82,8 +82,9 @@ $tmpEntityBicycleMarketColumns = [
 		'exclude' => true,
 		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.service_condition',
 		'config' => [
-			'type' => 'input',
-			'size' => 40,
+			'type' => 'text',
+			'cols' => 40,
+			'rows' => 4,
 			'eval' => 'trim'
 		],
 	],
