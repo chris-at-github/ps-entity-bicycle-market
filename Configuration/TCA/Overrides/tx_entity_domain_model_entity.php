@@ -4,7 +4,7 @@ defined('TYPO3_MODE') || die();
 // ---------------------------------------------------------------------------------------------------------------------
 // Neuer Extbase-Typ
 if(isset($GLOBALS['TCA']['tx_entity_domain_model_entity']['columns']['tx_extbase_type']) === true) {
-	$GLOBALS['TCA']['tx_entity_domain_model_entity']['columns']['tx_extbase_type']['config']['items'][] = ['LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.extbase_type', 'Ps\EntityProduct\Domain\Model\Bicycle'];
+	$GLOBALS['TCA']['tx_entity_domain_model_entity']['columns']['tx_extbase_type']['config']['items'][] = ['LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.extbase_type', 'Ps\EntityBicycleMarket\Domain\Model\Bicycle'];
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -157,7 +157,7 @@ $tmpEntityBicycleMarketColumns = [
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_entity_domain_model_entity', $tmpEntityBicycleMarketColumns);
 
-$GLOBALS['TCA']['tx_entity_domain_model_entity']['types']['Ps\EntityProduct\Domain\Model\Bicycle']['showitem'] = '
+$GLOBALS['TCA']['tx_entity_domain_model_entity']['types']['Ps\EntityBicycleMarket\Domain\Model\Bicycle']['showitem'] = '
 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
 	--palette--;;bicycle_general,
 	--palette--;;bicycle_condition,
@@ -169,3 +169,28 @@ $GLOBALS['TCA']['tx_entity_domain_model_entity']['types']['Ps\EntityProduct\Doma
 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
 	--palette--;;access,
 ';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Konfigurationsanpassungen von bestehenden Feldern
+$GLOBALS['TCA']['tx_entity_domain_model_entity']['types']['Ps\EntityBicycleMarket\Domain\Model\Bicycle']['columnsOverrides']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
+	'listing' => [
+		'title' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.image.listing',
+		'allowedAspectRatios' => [
+			'5_3' => [
+				'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.ratio.5_3',
+				'value' => 5 / 3
+			],
+		],
+		'selectedRatio' => '5_3',
+	],
+	'fullsize' => [
+		'title' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.image.fullsize',
+		'allowedAspectRatios' => [
+			'5_3' => [
+				'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.ratio.5_3',
+				'value' => 5 / 3
+			],
+		],
+		'selectedRatio' => '5_3',
+	],
+];
