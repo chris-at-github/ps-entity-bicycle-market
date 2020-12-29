@@ -41,4 +41,6 @@ call_user_func(function() {
 		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 		['source' => 'EXT:entity_bicycle_market/Resources/Public/Icons/user_plugin_frontend.svg']
 	);
+
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/form']['initializeFormElement'][1609278420] = \Ps\EntityBicycleMarket\Service\PrefillTokenElementService::class;
 });
