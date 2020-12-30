@@ -1,14 +1,14 @@
 plugin.tx_entitybicyclemarket {
 	view {
 		templateRootPaths.0 = EXT:entity_bicycle_market/Resources/Private/Templates/
-		templateRootPaths.1 = {$plugin.tx_entitybicyclemarket_frontend.view.templateRootPath}
+		templateRootPaths.1 = {$plugin.tx_entitybicyclemarket.view.templateRootPath}
 
 		partialRootPaths.0 = EXT:entity_bicycle_market/Resources/Private/Partials/
-		partialRootPaths.1 = {$plugin.tx_entitybicyclemarket_frontend.view.partialRootPath}
+		partialRootPaths.1 = {$plugin.tx_entitybicyclemarket.view.partialRootPath}
 		partialRootPaths.2 = EXT:xo/Resources/Private/Extensions/Xo/Partials/
 
 		layoutRootPaths.0 = EXT:entity_bicycle_market/Resources/Private/Layouts/
-		layoutRootPaths.1 = {$plugin.tx_entitybicyclemarket_frontend.view.layoutRootPath}
+		layoutRootPaths.1 = {$plugin.tx_entitybicyclemarket.view.layoutRootPath}
 	}
 
 	persistence {
@@ -26,5 +26,9 @@ plugin.tx_entitybicyclemarket {
 
 	mvc {
 		#callDefaultActionIfActionCantBeResolved = 1
+	}
+
+	settings {
+		showPageUid = {$plugin.tx_entitybicyclemarket.settings.showPageUid}
 	}
 }

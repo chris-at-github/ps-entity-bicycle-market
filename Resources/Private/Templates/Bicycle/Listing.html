@@ -21,19 +21,21 @@
 	</f:section>
 
 	<f:section name="Item">
-		<div>
-			<f:render partial="Components/Media" section="Picture" arguments="{
-				file: bicycle.media.0,
-				image: {maxWidth: 700, cropVariant: 'listing'},
-				sizes: {
-					0: {maxWidth: 485, mediaQuery: '(min-width: 768px)', cropVariant: 'listing'},
-					1: {maxWidth: 700, mediaQuery: '(min-width: 1px)', cropVariant: 'listing'}
-				}
-			}" />
-		</div>
+		<div data-target-uri="{f:uri.action(action: 'show', arguments: '{bicycle: bicycle}', pageUid: settings.showPageUid)}">
+			<div>
+				<f:render partial="Components/Media" section="Picture" arguments="{
+					file: bicycle.media.0,
+					image: {maxWidth: 700, cropVariant: 'listing'},
+					sizes: {
+						0: {maxWidth: 485, mediaQuery: '(min-width: 768px)', cropVariant: 'listing'},
+						1: {maxWidth: 700, mediaQuery: '(min-width: 1px)', cropVariant: 'listing'}
+					}
+				}" />
+			</div>
 
-		<div><f:link.action action="show" arguments="{bicycle: bicycle}">{bicycle.title}</f:link.action></div>
-		<div>{bicycle.brand}</div>
+			<div><f:link.action action="show" arguments="{bicycle: bicycle}" pageUid="{settings.showPageUid}">{bicycle.title}</f:link.action></div>
+			<div>{bicycle.brand}</div>
+		</div>
 	</f:section>
 
 	<f:section name="Modal">
@@ -49,9 +51,9 @@
 		</div>
 
 		<script>
-			xna.on('documentLoaded', function() {
-				xna.fire('bicycleOpen');
-			});
+			// xna.on('documentLoaded', function() {
+			// 	xna.fire('bicycleOpen');
+			// });
 		</script>
 	</f:section>
 
