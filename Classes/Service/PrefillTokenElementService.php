@@ -15,7 +15,8 @@ class PrefillTokenElementService {
 	 * @return void
 	 */
 	public function initializeFormElement(\TYPO3\CMS\Form\Domain\Model\Renderable\RenderableInterface $renderable) {
-		if($renderable->getIdentifier() === 'token') {
+
+		if($renderable->getIdentifier() === 'token' || $renderable->getIdentifier() === 'bicycle') {
 			$request = GeneralUtility::_GET('tx_entitybicyclemarket_frontend');
 
 			if(empty($request) === false && empty($request['bicycle']) === false) {
@@ -26,8 +27,12 @@ class PrefillTokenElementService {
 				/** @var Bicycle $bicycle */
 				$bicycle = $objectManager->get(BicycleRepository::class)->findByUid((int) $request['bicycle']);
 
-				if($bicycle !== null) {
+				if($bicycle !== null && $renderable->getIdentifier() === 'token') {
 					$renderable->setDefaultValue($bicycle->getToken());
+				}
+
+				if($bicycle !== null && $renderable->getIdentifier() === 'bicycle') {
+					$renderable->setDefaultValue($bicycle->getTitle() . ', ' . $bicycle->getBrand());
 				}
 			}
 		}

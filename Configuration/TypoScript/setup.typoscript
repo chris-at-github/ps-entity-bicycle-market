@@ -34,3 +34,10 @@ plugin.tx_entitybicyclemarket {
 		fetchRequestTypeNum = {$plugin.tx_entitybicyclemarket.settings.fetchRequestTypeNum}
 	}
 }
+
+block.requestForm = RECORDS
+block.requestForm {
+	source = 88
+	dontCheckPid = 1
+	tables = tt_content
+}
