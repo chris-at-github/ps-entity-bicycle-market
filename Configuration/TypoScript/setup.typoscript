@@ -30,6 +30,7 @@ plugin.tx_entitybicyclemarket {
 
 	settings {
 		showPageUid = {$plugin.tx_entitybicyclemarket.settings.showPageUid}
+		requestPageUid = {$plugin.tx_entitybicyclemarket.settings.requestPageUid}
 		fetchRequestTypeNum = {$plugin.tx_entitybicyclemarket.settings.fetchRequestTypeNum}
 	}
 }

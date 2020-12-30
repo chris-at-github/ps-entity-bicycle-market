@@ -4,17 +4,13 @@
   <f:section name="Main">
 
     <div class="bicycle-market--single">
-      <f:render section="Images" arguments="{bicycle: bicycle}" />
+      <f:comment><f:render section="Images" arguments="{bicycle: bicycle}" /></f:comment>
       <f:render section="Header" arguments="{bicycle: bicycle}" />
       <f:render section="Condition" arguments="{bicycle: bicycle}" />
       <f:render section="Service" arguments="{bicycle: bicycle}" />
       <f:render section="Price" arguments="{bicycle: bicycle}" />
       <f:render section="Size" arguments="{bicycle: bicycle}" />
     </div>
-
-    <script>
-      xna.fire('bicycleLoaded');
-    </script>
   </f:section>
 
   <f:section name="Images">
@@ -52,6 +48,8 @@
     <f:if condition="{bicycle.brand}">
       <div><f:translate key="bicycle.brand" />: {bicycle.brand}</div>
     </f:if>
+
+    <f:link.action action="request" arguments="{bicycle: bicycle}" pageUid="{settings.requestPageUid}"><f:translate key="bicycle.actions.request" /></f:link.action>
   </f:section>
 
   <f:section name="Condition">
