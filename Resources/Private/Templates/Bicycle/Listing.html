@@ -21,7 +21,7 @@
 	</f:section>
 
 	<f:section name="Item">
-		<div data-target-uri="{f:uri.action(action: 'show', arguments: '{bicycle: bicycle}', pageUid: settings.showPageUid)}">
+		<div class="bicycle-listing--item" data-target-uri="{f:uri.action(action: 'show', arguments: '{bicycle: bicycle}', pageUid: settings.showPageUid, pageType: settings.fetchRequestTypeNum)}">
 			<div>
 				<f:render partial="Components/Media" section="Picture" arguments="{
 					file: bicycle.media.0,
@@ -40,10 +40,10 @@
 
 	<f:section name="Modal">
 
-		<div id="modal-1" aria-hidden="true">
+		<div id="bicycle-modal" class="bicycle-modal" aria-hidden="true">
 			<div tabindex="-1" data-micromodal-close class="modal--backdrop">
 				<button aria-label="Close modal" data-micromodal-close class="modal--close"><span aria-hidden="true">&times;</span></button>
-				<div role="dialog" aria-modal="true" class="modal">
+				<div role="dialog" aria-modal="true" class="modal bicycle-record">
 					xxx
 				</div>
 			</div>

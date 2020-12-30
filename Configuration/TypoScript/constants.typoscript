@@ -20,5 +20,8 @@ plugin.tx_entitybicyclemarket {
 
 		# cat=plugin.tx_entitybicyclemarket//a; type=string; label=UID of detail page
 		showPageUid =
+
+		# cat=plugin.tx_entitybicyclemarket//a; type=string; label=UID of detail page
+		fetchRequestTypeNum =
 	}
 }
