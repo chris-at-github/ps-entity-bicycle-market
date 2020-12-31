@@ -11,9 +11,27 @@
 	</f:section>
 
 	<f:section name="Listing">
-		<div class="row">
+		<div class="row bicycle-listing">
 			<f:for each="{bicycles}" as="bicycle">
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-md-6 col-lg-4">
+					<f:render section="Item" arguments="{_all}" />
+				</div>
+			</f:for>
+
+			<f:for each="{bicycles}" as="bicycle">
+				<div class="col-12 col-md-6 col-lg-4">
+					<f:render section="Item" arguments="{_all}" />
+				</div>
+			</f:for>
+
+			<f:for each="{bicycles}" as="bicycle">
+				<div class="col-12 col-md-6 col-lg-4">
+					<f:render section="Item" arguments="{_all}" />
+				</div>
+			</f:for>
+
+			<f:for each="{bicycles}" as="bicycle">
+				<div class="col-12 col-md-6 col-lg-4">
 					<f:render section="Item" arguments="{_all}" />
 				</div>
 			</f:for>
@@ -21,20 +39,24 @@
 	</f:section>
 
 	<f:section name="Item">
-		<div class="bicycle-listing--item" data-target-uri="{f:uri.action(action: 'show', arguments: '{bicycle: bicycle}', pageUid: settings.showPageUid, pageType: settings.fetchRequestTypeNum)}">
-			<div>
+		<div class="bicycle-item" data-target-uri="{f:uri.action(action: 'show', arguments: '{bicycle: bicycle}', pageUid: settings.showPageUid, pageType: settings.fetchRequestTypeNum)}" title="{f:translate(key: 'item.title', arguments: {0: bicycle.title})}">
+			<div class="bicycle-item--image">
 				<f:render partial="Components/Media" section="Picture" arguments="{
 					file: bicycle.media.0,
-					image: {maxWidth: 700, cropVariant: 'listing'},
+					image: {maxWidth: 700, cropVariant: 'listing', title: '{f:translate(key: \'item.title\', arguments: {0: bicycle.title})}'},
 					sizes: {
-						0: {maxWidth: 485, mediaQuery: '(min-width: 768px)', cropVariant: 'listing'},
-						1: {maxWidth: 700, mediaQuery: '(min-width: 1px)', cropVariant: 'listing'}
+						0: {maxWidth: 315, mediaQuery: '(min-width: 992px)', cropVariant: 'listing'},
+						1: {maxWidth: 445, mediaQuery: '(min-width: 768px)', cropVariant: 'listing'},
+						2: {maxWidth: 700, mediaQuery: '(min-width: 1px)', cropVariant: 'listing'}
 					}
 				}" />
 			</div>
 
-			<div><f:link.action action="show" arguments="{bicycle: bicycle}" pageUid="{settings.showPageUid}">{bicycle.title}</f:link.action></div>
-			<div>{bicycle.brand}</div>
+			<div class="bicycle-item--title">{bicycle.title}</div>
+
+			<f:if condition="{bicycle.brand}">
+				<div class="bicycle-item--brand">{bicycle.brand}</div>
+			</f:if>
 		</div>
 	</f:section>
 
@@ -45,23 +67,8 @@
 				<button aria-label="Close modal" data-micromodal-close class="modal--close"><span aria-hidden="true">&times;</span></button>
 				<div role="dialog" aria-modal="true" class="modal bicycle-record"></div>
 			</div>
-			</div>
 		</div>
 
-		<script>
-			// xna.on('documentLoaded', function() {
-			// 	xna.fire('bicycleOpen');
-			// });
-		</script>
-	</f:section>
 
-	<f:section name="Modal2">
-		<div class="bicycle-market--modal-backdrop"></div>
-		<div class="container-outer container-outer--width-normal bicycle-market--modal" tabindex="-1" role="dialog">
-			<div class="bicycle-market--modal-close"><button aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-			<div class="container-inner bicycle-market--modal-container">
-
-			</div>
-		</div>
 	</f:section>
 </html>

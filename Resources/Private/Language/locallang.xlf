@@ -42,8 +42,13 @@
 			<trans-unit id="bicycle.manufacturerGuarantee.available" resname="bicycle.manufacturerGuarantee.available">
 				<source>Available</source>
 			</trans-unit>
-			<trans-unit id="bicycle.actions.request" resname="bicycle.actions.request">
+
+			<trans-unit id="actions.request" resname="actions.request">
 				<source>Anfrage stellen</source>
+			</trans-unit>
+
+			<trans-unit id="item.title" resname="item.title">
+				<source>Zur Detailansicht von %s</source>
 			</trans-unit>
 		</body>
 	</file>
