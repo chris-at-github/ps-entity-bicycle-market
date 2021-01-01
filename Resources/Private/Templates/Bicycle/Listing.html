@@ -62,10 +62,30 @@
 
 	<f:section name="Modal">
 
+		<script>
+			xna.fire('modalTest');
+		</script>
+
 		<div id="bicycle-modal" class="bicycle-modal" aria-hidden="true">
 			<div tabindex="-1" data-micromodal-close class="modal--backdrop">
 				<button aria-label="Close modal" data-micromodal-close class="modal--close"><span aria-hidden="true">&times;</span></button>
-				<div role="dialog" aria-modal="true" class="modal bicycle-record"></div>
+				<div role="dialog" aria-modal="true" class="modal">
+
+
+
+					<div class="bicycle-modal--content bicycle-modal--data"><div class="bicycle-modal--image"><div class="slider"><div class="slider--container"><div class="slider--item"><picture><source srcset="/fileadmin/_processed_/b/3/csm_454100_O1_8b764c9cf2.jpg" media="(min-width: 768px)" /><source srcset="/fileadmin/_processed_/b/3/csm_454100_O1_7e351b1945.jpg" media="(min-width: 1px)" /><img src="/fileadmin/_processed_/b/3/csm_454100_O1_09c5e011e6.jpg" width="1000" height="600" alt="" title="" /></picture></div><div class="slider--item"><picture><source srcset="/fileadmin/_processed_/e/4/csm_454100_D1_8bec5bd75d.jpg" media="(min-width: 768px)" /><source srcset="/fileadmin/_processed_/e/4/csm_454100_D1_2291de74e5.jpg" media="(min-width: 1px)" /><img src="/fileadmin/_processed_/e/4/csm_454100_D1_669dc74833.jpg" width="1000" height="600" alt="" title="" /></picture></div><div class="slider--item"><picture><source srcset="/fileadmin/_processed_/1/a/csm_454100_D2_948fceed6d.jpg" media="(min-width: 768px)" /><source srcset="/fileadmin/_processed_/1/a/csm_454100_D2_649397db05.jpg" media="(min-width: 1px)" /><img src="/fileadmin/_processed_/1/a/csm_454100_D2_c056b1ab93.jpg" width="1000" height="600" alt="" title="" /></picture></div><div class="slider--item"><picture><source srcset="/fileadmin/_processed_/b/6/csm_454100_D3_a9e06c2502.jpg" media="(min-width: 768px)" /><source srcset="/fileadmin/_processed_/b/6/csm_454100_D3_1fa471eb5a.jpg" media="(min-width: 1px)" /><img src="/fileadmin/_processed_/b/6/csm_454100_D3_a5949c1f6c.jpg" width="1000" height="600" alt="" title="" /></picture></div><div class="slider--item"><picture><source srcset="/fileadmin/_processed_/9/f/csm_454100_D5_772c9577b9.jpg" media="(min-width: 768px)" /><source srcset="/fileadmin/_processed_/9/f/csm_454100_D5_d13d2f9cb1.jpg" media="(min-width: 1px)" /><img src="/fileadmin/_processed_/9/f/csm_454100_D5_41ed3632cf.jpg" width="1000" height="600" alt="" title="" /></picture></div><div class="slider--item"><picture><source srcset="/fileadmin/_processed_/e/e/csm_454100_D4_59aecd9608.jpg" media="(min-width: 768px)" /><source srcset="/fileadmin/_processed_/e/e/csm_454100_D4_3a22d6584b.jpg" media="(min-width: 1px)" /><img src="/fileadmin/_processed_/e/e/csm_454100_D4_01741dbdf3.jpg" width="1000" height="600" alt="" title="" /></picture></div></div><div class="slider--controls"><div class="slider--controls-inner"><div class="slider--prev"><button aria-label="Zurück"><svg viewBox="0 0 34 135" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" fill="#2d808d"><path d="M331.332,378.962C331.333,378.693 331.389,378.423 331.499,378.171C335.727,368.463 355.469,323.144 359.697,313.436C359.909,312.95 360.305,312.568 360.799,312.374C361.293,312.18 361.843,312.19 362.33,312.401C362.596,312.517 362.87,312.637 363.136,312.753C363.622,312.964 364.004,313.361 364.198,313.854C364.392,314.348 364.382,314.899 364.171,315.385C359.888,325.216 339.733,371.485 336.833,378.142C336.611,378.652 336.611,379.231 336.833,379.74C339.735,386.401 359.911,432.719 364.196,442.555C364.637,443.568 364.173,444.746 363.161,445.187C362.887,445.307 362.604,445.43 362.33,445.549C361.843,445.761 361.293,445.771 360.799,445.577C360.305,445.383 359.909,445.001 359.697,444.515C355.469,434.807 335.727,389.488 331.499,379.78C331.389,379.528 331.333,379.258 331.332,378.988L331.332,378.969L331.332,378.962Z" transform="matrix(1,0,0,1,-331.332,-311.603) matrix(1.22563,0,0,2.33454,-312.985,-1728.65) matrix(0.815904,0,0,0.42835,255.366,740.467)"/></svg></button></div><div class="slider--next"><button aria-label="Weiter"><svg viewBox="0 0 34 135" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" fill="#2d808d"><path d="M331.332,378.962C331.333,378.693 331.389,378.423 331.499,378.171C335.727,368.463 355.469,323.144 359.697,313.436C359.909,312.95 360.305,312.568 360.799,312.374C361.293,312.18 361.843,312.19 362.33,312.401C362.596,312.517 362.87,312.637 363.136,312.753C363.622,312.964 364.004,313.361 364.198,313.854C364.392,314.348 364.382,314.899 364.171,315.385C359.888,325.216 339.733,371.485 336.833,378.142C336.611,378.652 336.611,379.231 336.833,379.74C339.735,386.401 359.911,432.719 364.196,442.555C364.637,443.568 364.173,444.746 363.161,445.187C362.887,445.307 362.604,445.43 362.33,445.549C361.843,445.761 361.293,445.771 360.799,445.577C360.305,445.383 359.909,445.001 359.697,444.515C355.469,434.807 335.727,389.488 331.499,379.78C331.389,379.528 331.333,379.258 331.332,378.988L331.332,378.969L331.332,378.962Z" transform="matrix(1,0,0,1,-1536.33,-311.603) matrix(-1.22563,0,0,2.33454,2214.31,-1728.65) matrix(0.815904,0,0,0.42835,255.366,740.467)"/></svg></button></div></div></div><div class="slider--navigation"><div class="slider--navigation-inner"><ul><li title="1"><span>1</span></li><li title="2"><span>2</span></li><li title="3"><span>3</span></li><li title="4"><span>4</span></li><li title="5"><span>5</span></li><li title="6"><span>6</span></li></ul></div></div></div></div><header>Stero 140</header><div>Brand: Cube</div><a href="/radlboerse/anfrage-erstellen?tx_entitybicyclemarket_frontend%5Baction%5D=request&amp;tx_entitybicyclemarket_frontend%5Bbicycle%5D=1&amp;tx_entitybicyclemarket_frontend%5Bcontroller%5D=Bicycle&amp;cHash=03ea7b8cf4688c557bc9bd9f9e89859d"></a><div>
+						Condition: As new
+
+						<p>Fahrrad wurde nur auf einer einstündigen Testfahrt benutzt. Leichte Gebrauchsspuren an den Pedalen.</p></div><div>
+						Service Condition: <p>Kompletter Service durchgeführt. Die Bremsen wurden erneuert.</p></div><div>
+						Price: Negotiation Basis
+					</div><div>
+						Frame Size: 18"
+					</div><div>
+						Wheel Size: 29"
+					</div></div>
+
+				</div>
 			</div>
 		</div>
 

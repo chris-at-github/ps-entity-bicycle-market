@@ -2,45 +2,56 @@
   <f:layout name="Default" />
 
   <f:section name="Main">
-    <div class="bicycle-market--single">
-      <f:comment><f:render section="Images" arguments="{bicycle: bicycle}" /></f:comment>
+    <div class="bicycle-modal--content bicycle-modal--data">
+      <f:render section="Images" arguments="{bicycle: bicycle}" />
       <f:render section="Header" arguments="{bicycle: bicycle}" />
       <f:render section="Condition" arguments="{bicycle: bicycle}" />
       <f:render section="Service" arguments="{bicycle: bicycle}" />
       <f:render section="Price" arguments="{bicycle: bicycle}" />
       <f:render section="Size" arguments="{bicycle: bicycle}" />
     </div>
-    <div>
-      <f:cObject typoscriptObjectPath="block.requestForm" />
-    </div>
+
+    <f:comment>
+<!--    <div>-->
+<!--      <f:cObject typoscriptObjectPath="block.requestForm" />-->
+<!--    </div>--></f:comment>
   </f:section>
 
   <f:section name="Images">
+    <div class="bicycle-modal--image">
+      <div class="slider">
+        <div class="slider--container">
+          <f:for each="{bicycle.media}" as="image">
+            <div class="slider--item">
+              <f:render partial="Components/Media" section="Picture" arguments="{
+              file: image,
+              image: {maxWidth: 1000, cropVariant: 'fullsize'},
+              sizes: {
+                0: {maxWidth: 1000, mediaQuery: '(min-width: 768px)', cropVariant: 'fullsize'},
+                1: {maxWidth: 700, mediaQuery: '(min-width: 1px)', cropVariant: 'fullsize'}
+              }
+            }" />
+            </div>
+          </f:for>
+        </div>
 
-    <div class="slider">
-      <div class="slider--container">
-        <f:for each="{bicycle.media}" as="image">
-          <div>
-            <f:render partial="Components/Media" section="Picture" arguments="{
-            file: image,
-            image: {maxWidth: 1000, cropVariant: 'fullsize'},
-            sizes: {
-              0: {maxWidth: 1000, mediaQuery: '(min-width: 768px)', cropVariant: 'fullsize'},
-              1: {maxWidth: 700, mediaQuery: '(min-width: 1px)', cropVariant: 'fullsize'}
-            }
-          }" />
+        <div class="slider--controls">
+          <div class="slider--controls-inner">
+            <div class="slider--prev"><button aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.prev')}"><xo:svg.inline source="/assets/svg/arrow-left.svg" /></button></div>
+            <div class="slider--next"><button aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.next')}"><xo:svg.inline source="/assets/svg/arrow-right.svg" /></button></div>
           </div>
-        </f:for>
-      </div>
+        </div>
 
-      <div class="slider--controls">
-        <div class="slider--controls-inner">
-          <div class="slider--prev"><button aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.prev')}"><xo:svg.inline source="/assets/svg/arrow-left.svg" /></button></div>
-          <div class="slider--next"><button aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.next')}"><xo:svg.inline source="/assets/svg/arrow-right.svg" /></button></div>
+        <div class="slider--navigation">
+          <div class="slider--navigation-inner">
+            <ul>
+              <f:for each="{bicycle.media}" as="image" iteration="iterator">
+                <li title="{iterator.cycle}"><span>{iterator.cycle}</span></li>
+              </f:for>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <f:render partial="Elements/Slider/Navigation" section="Main" arguments="{_all}" />
     </div>
   </f:section>
 
