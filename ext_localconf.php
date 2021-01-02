@@ -7,11 +7,11 @@ call_user_func(function() {
 		'EntityBicycleMarket',
 		'Frontend',
 		[
-			\Ps\EntityBicycleMarket\Controller\BicycleController::class => 'listing, show'
+			\Ps\EntityBicycleMarket\Controller\BicycleController::class => 'listing, show, request'
 		],
 		// non-cacheable actions
 		[
-			\Ps\EntityBicycleMarket\Controller\BicycleController::class => ''
+			\Ps\EntityBicycleMarket\Controller\BicycleController::class => 'request'
 		]
 	);
 

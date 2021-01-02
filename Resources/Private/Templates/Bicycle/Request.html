@@ -1,0 +1,69 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers"
+      xmlns="http://www.w3.org/1999/html" data-namespace-typo3-fluid="true">
+  <f:layout name="Default" />
+
+  <f:section name="Main">
+    <div class="bicycle-request">
+      <f:render section="Bicycle" arguments="{_all}" />
+      <f:render section="Contact" arguments="{_all}" />
+    </div>
+  </f:section>
+
+  <f:section name="Bicycle">
+    <div class="bicycle-request--section">
+      <header class="bicycle-request--section-header"><f:translate key="request.header.request" /></header>
+
+      <div class="bicycle-request--title">{bicycle.title}</div>
+
+      <div class="bicycle-request--properties">
+
+        <f:if condition="{bicycle.brand}">
+          <div class="bicycle-request--property">
+            <div class="bicycle-request--property-title"><f:translate key="bicycle.brand" /></div>
+            <div class="bicycle-request--property-value">{bicycle.brand}</div>
+          </div>
+        </f:if>
+
+        <f:if condition="{bicycle.priceNegotiationBasis}">
+          <f:then>
+            <div class="bicycle-request--property">
+              <div class="bicycle-request--property-title"><f:translate key="bicycle.price" /></div>
+              <div class="bicycle-request--property-value"><f:translate key="bicycle.priceNegotiationBasis" /></div>
+            </div>
+          </f:then>
+          <f:else if="{bicycle.price}">
+            <div class="bicycle-request--property">
+              <div class="bicycle-request--property-title"><f:translate key="bicycle.price" /></div>
+              <div class="bicycle-request--property-value"><f:format.currency currencySign="€">{bicycle.price}</f:format.currency></div>
+            </div>
+          </f:else>
+        </f:if>
+
+        <f:if condition="{bicycle.condition}">
+          <div class="bicycle-request--property">
+            <div class="bicycle-request--property-title"><f:translate key="bicycle.condition" /></div>
+            <div class="bicycle-request--property-value"><f:translate key="bicycle.condition.{bicycle.condition}" /></div>
+          </div>
+        </f:if>
+
+      </div>
+    </div>
+  </f:section>
+
+  <f:section name="Contact">
+    <div class="bicycle-request--section">
+      <header class="bicycle-request--section-header"><f:translate key="request.header.contact" /></header>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-8 col-md-7">
+        <f:cObject typoscriptObjectPath="block.requestForm" />
+      </div>
+      <div class="col-12 col-md-5 col-lg-4">
+        <div>Oder direkt per Telefon</div>
+        <div>08856 / 238472 342</div>
+        <div>Bitte geben sie hier zur eindeutigen Zuordnung den Token #435266 an.</div>
+      </div>
+    </div>
+  </f:section>
+</html>

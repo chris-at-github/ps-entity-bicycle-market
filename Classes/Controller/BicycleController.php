@@ -37,8 +37,6 @@ class BicycleController extends EntityController {
 	}
 
 	/**
-	 * action list
-	 *
 	 * @return void
 	 */
 	public function listingAction() {
@@ -46,12 +44,18 @@ class BicycleController extends EntityController {
 	}
 
 	/**
-	 * action show
-	 *
 	 * @param \Ps\EntityBicycleMarket\Domain\Model\Bicycle $bicycle
 	 * @return void
 	 */
 	public function showAction($bicycle) {
+		$this->view->assign('bicycle', $bicycle);
+	}
+
+	/**
+	 * @param \Ps\EntityBicycleMarket\Domain\Model\Bicycle $bicycle
+	 * @return void
+	 */
+	public function requestAction($bicycle) {
 		$this->view->assign('bicycle', $bicycle);
 	}
 }

@@ -6,6 +6,9 @@
 			<trans-unit id="bicycle.condition" resname="bicycle.condition">
 				<target>Zustand</target>
 			</trans-unit>
+			<trans-unit id="bicycle.brand" resname="bicycle.brand">
+				<target>Hersteller</target>
+			</trans-unit>
 			<trans-unit id="bicycle.condition.new" resname="bicycle.condition.new">
 				<target>Neu</target>
 			</trans-unit>
@@ -46,6 +49,13 @@
 
 			<trans-unit id="item.title" resname="item.title">
 				<target>Mehr Informationen zu %s</target>
+			</trans-unit>
+
+			<trans-unit id="request.header.request" resname="request.header.request">
+				<target>Ihre Anfrage</target>
+			</trans-unit>
+			<trans-unit id="request.header.contact" resname="request.header.contact">
+				<target>Ihre Kontaktdaten</target>
 			</trans-unit>
 		</body>
 	</file>

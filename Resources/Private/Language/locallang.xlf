@@ -6,6 +6,9 @@
 			<trans-unit id="bicycle" resname="bicycle">
 				<source>Bicycle</source>
 			</trans-unit>
+			<trans-unit id="bicycle.brand" resname="bicycle.brand">
+				<source>Brand</source>
+			</trans-unit>
 			<trans-unit id="bicycle.condition" resname="bicycle.condition">
 				<source>Condition</source>
 			</trans-unit>
@@ -49,6 +52,13 @@
 
 			<trans-unit id="item.title" resname="item.title">
 				<source>Detail information for %s</source>
+			</trans-unit>
+
+			<trans-unit id="request.header.request" resname="request.header.request">
+				<source>Your request</source>
+			</trans-unit>
+			<trans-unit id="request.header.contact" resname="request.header.contact">
+				<source>Your contact data</source>
 			</trans-unit>
 		</body>
 	</file>
