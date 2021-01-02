@@ -6,9 +6,6 @@
 			<trans-unit id="bicycle" resname="bicycle">
 				<source>Bicycle</source>
 			</trans-unit>
-			<trans-unit id="bicycle.brand" resname="bicycle.brand">
-				<source>Brand</source>
-			</trans-unit>
 			<trans-unit id="bicycle.condition" resname="bicycle.condition">
 				<source>Condition</source>
 			</trans-unit>
@@ -44,11 +41,14 @@
 			</trans-unit>
 
 			<trans-unit id="actions.request" resname="actions.request">
-				<source>Anfrage stellen</source>
+				<source>Send request</source>
+			</trans-unit>
+			<trans-unit id="actions.closeModal" resname="actions.request">
+				<source>Close</source>
 			</trans-unit>
 
 			<trans-unit id="item.title" resname="item.title">
-				<source>Zur Detailansicht von %s</source>
+				<source>Detail information for %s</source>
 			</trans-unit>
 		</body>
 	</file>
