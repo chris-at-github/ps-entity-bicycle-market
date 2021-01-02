@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="bicycle.condition" resname="bicycle.condition">
+				<target>Zustand</target>
+			</trans-unit>
+			<trans-unit id="bicycle.condition.new" resname="bicycle.condition.new">
+				<target>Neu</target>
+			</trans-unit>
+			<trans-unit id="bicycle.condition.asNew" resname="bicycle.condition.asNew">
+				<target>Neuwertig</target>
+			</trans-unit>
+			<trans-unit id="bicycle.condition.used" resname="bicycle.condition.used">
+				<target>Gebraucht</target>
+			</trans-unit>
+			<trans-unit id="bicycle.serviceCondition" resname="bicycle.serviceCondition">
+				<target>Service Stand</target>
+			</trans-unit>
+			<trans-unit id="bicycle.frameSize" resname="bicycle.frameSize">
+				<target>Rahmengröße</target>
+			</trans-unit>
+			<trans-unit id="bicycle.wheelSize" resname="bicycle.wheelSize">
+				<target>Reifengröße</target>
+			</trans-unit>
+			<trans-unit id="bicycle.price" resname="bicycle.price">
+				<target>Preis</target>
+			</trans-unit>
+			<trans-unit id="bicycle.priceNegotiationBasis" resname="bicycle.priceNegotiationBasis">
+				<target>Verhandlungsbasis</target>
+			</trans-unit>
+			<trans-unit id="bicycle.manufacturerGuarantee" resname="bicycle.manufacturerGuarantee">
+				<target>Herstellergarantie</target>
+			</trans-unit>
+			<trans-unit id="bicycle.manufacturerGuarantee.available" resname="bicycle.manufacturerGuarantee.available">
+				<target>Vorhanden</target>
+			</trans-unit>
+
+			<trans-unit id="actions.request" resname="actions.request">
+				<target>Anfrage senden</target>
+			</trans-unit>
+			<trans-unit id="actions.closeModal" resname="actions.request">
+				<target>Schließen</target>
+			</trans-unit>
+
+			<trans-unit id="item.title" resname="item.title">
+				<target>Mehr Informationen zu %s</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

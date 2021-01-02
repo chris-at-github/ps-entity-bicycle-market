@@ -68,7 +68,7 @@
 
   <f:section name="Header">
     <div class="row">
-      <div class="col-12 col-md-8">
+      <div class="col-12 col-md-7">
         <div class="bicycle-modal--title">{bicycle.title}</div>
 
         <f:if condition="{bicycle.brand}">
@@ -76,7 +76,7 @@
         </f:if>
       </div>
 
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-5">
         <f:link.action class="bicycle-modal--request-action" action="request" arguments="{bicycle: bicycle}" pageUid="{settings.requestPageUid}"><f:translate key="actions.request" /></f:link.action>
       </div>
     </div>
