@@ -73,6 +73,13 @@ $tmpEntityBicycleMarketColumns = [
 		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.condition_description',
 		'config' => [
 			'type' => 'text',
+			'enableRichtext' => true,
+			'richtextConfiguration' => 'xoMinimal',
+			'fieldControl' => [
+				'fullScreenRichtext' => [
+					'disabled' => false,
+				],
+			],
 			'cols' => 40,
 			'rows' => 4,
 			'eval' => 'trim'
@@ -83,8 +90,15 @@ $tmpEntityBicycleMarketColumns = [
 		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.service_condition',
 		'config' => [
 			'type' => 'text',
+			'enableRichtext' => true,
+			'richtextConfiguration' => 'xoMinimal',
+			'fieldControl' => [
+				'fullScreenRichtext' => [
+					'disabled' => false,
+				],
+			],
 			'cols' => 40,
-			'rows' => 4,
+			'rows' => 2,
 			'eval' => 'trim'
 		],
 	],
