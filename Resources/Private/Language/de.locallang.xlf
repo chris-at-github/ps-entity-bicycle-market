@@ -57,6 +57,13 @@
 			<trans-unit id="request.header.contact" resname="request.header.contact">
 				<target>Ihre Kontaktdaten</target>
 			</trans-unit>
+
+			<trans-unit id="request.phone.header" resname="request.phone.header">
+				<target>Oder direkt per Telefon</target>
+			</trans-unit>
+			<trans-unit id="request.phone.description" resname="request.phone.description">
+				<target><![CDATA[Bitte geben sie hier zur eindeutigen Zuordnung den Token <strong>%s</strong> an.]]></target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

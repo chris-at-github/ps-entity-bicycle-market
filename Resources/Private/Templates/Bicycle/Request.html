@@ -59,10 +59,11 @@
       <div class="col-12 col-sm-8 col-md-7">
         <f:cObject typoscriptObjectPath="block.requestForm" />
       </div>
-      <div class="col-12 col-md-5 col-lg-4">
-        <div>Oder direkt per Telefon</div>
-        <div>08856 / 238472 342</div>
-        <div>Bitte geben sie hier zur eindeutigen Zuordnung den Token #435266 an.</div>
+
+      <div class="col-12 col-md-5 col-lg-4 bicycle-request--contact-phone">
+        <header class="bicycle-request--contact-phone-header"><f:translate key="request.phone.header" /></header>
+        <div class="bicycle-request--contact-phone-number"><a href="{xo:uri.phone(phone: address.phone)}">{address.phone}</a></div>
+        <div class="bicycle-request--contact-phone-description"><f:format.raw><f:translate key="request.phone.description" arguments="{0: bicycle.token}" /></f:format.raw></div>
       </div>
     </div>
   </f:section>

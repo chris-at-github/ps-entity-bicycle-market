@@ -5,6 +5,7 @@ namespace Ps\EntityBicycleMarket\Controller;
 
 
 use Ps\Entity\Controller\EntityController;
+use Ps\Xo\Domain\Repository\AddressRepository;
 
 /***
  *
@@ -56,6 +57,7 @@ class BicycleController extends EntityController {
 	 * @return void
 	 */
 	public function requestAction($bicycle) {
+		$this->view->assign('address', $this->objectManager->get(AddressRepository::class)->findByUid((int) $this->settings['contactAddressUid']));
 		$this->view->assign('bicycle', $bicycle);
 	}
 }

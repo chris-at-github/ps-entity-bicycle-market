@@ -60,6 +60,13 @@
 			<trans-unit id="request.header.contact" resname="request.header.contact">
 				<source>Your contact data</source>
 			</trans-unit>
+
+			<trans-unit id="request.phone.header" resname="request.phone.header">
+				<source>Directly by phone</source>
+			</trans-unit>
+			<trans-unit id="request.phone.description" resname="request.phone.description">
+				<source><![CDATA[Please tell us the token <strong>%s</strong> for identification.]]></source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

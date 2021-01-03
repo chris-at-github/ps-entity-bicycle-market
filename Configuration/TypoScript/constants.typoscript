@@ -26,5 +26,8 @@ plugin.tx_entitybicyclemarket {
 
 		# cat=plugin.tx_entitybicyclemarket//a; type=string; label=UID of detail page
 		fetchRequestTypeNum =
+
+		# cat=plugin.tx_entitybicyclemarket//a; type=string; label=UID of tt_address record for contact data on request page
+		contactAddressUid =
 	}
 }
