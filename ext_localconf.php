@@ -42,5 +42,6 @@ call_user_func(function() {
 		['source' => 'EXT:entity_bicycle_market/Resources/Public/Icons/user_plugin_frontend.svg']
 	);
 
-	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/form']['initializeFormElement'][1609278420] = \Ps\EntityBicycleMarket\Service\PrefillTokenElementService::class;
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/form']['initializeFormElement'][1609278420] = \Ps\EntityBicycleMarket\Service\PrefillElementService::class;
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][1609707169] = \Ps\EntityBicycleMarket\Service\GenerateTokenService::class;
 });

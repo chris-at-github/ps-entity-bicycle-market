@@ -8,7 +8,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
-class PrefillTokenElementService {
+class PrefillElementService {
 
 	/**
 	 * @param \TYPO3\CMS\Form\Domain\Model\Renderable\RenderableInterface $renderable
