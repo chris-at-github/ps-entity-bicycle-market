@@ -1,0 +1,22 @@
+["{$plugin.tx_entitybicyclemarket.persistence.storagePid}" in tree.rootLineIds]
+	TCAdefaults.tx_entity_domain_model_entity {
+		tx_extbase_type = Ps\EntityBicycleMarket\Domain\Model\Bicycle
+	}
+[END]
+
+mod {
+	wizards.newContentElement.wizardItems.plugins {
+		elements {
+			frontend {
+				iconIdentifier = entity_bicycle_market-plugin-frontend
+				title = LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_plugin.xlf:frontend.name
+				description = LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_plugin.xlf:frontend.description
+				tt_content_defValues {
+					CType = list
+					list_type = entitybicyclemarket_frontend
+				}
+			}
+		}
+		show = *
+	}
+}

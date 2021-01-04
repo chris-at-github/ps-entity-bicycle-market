@@ -17,22 +17,7 @@ call_user_func(function() {
 
 	// wizards
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-'mod {
-			wizards.newContentElement.wizardItems.plugins {
-				elements {
-					frontend {
-						iconIdentifier = entity_bicycle_market-plugin-frontend
-						title = LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_plugin.xlf:frontend.name
-						description = LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_plugin.xlf:frontend.description
-						tt_content_defValues {
-							CType = list
-							list_type = entitybicyclemarket_frontend
-						}
-					}
-				}
-				show = *
-			}
-		}'
+'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:entity_bicycle_market/Configuration/TSConfig/Page.t3s">'
 	);
 
 	$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
