@@ -185,8 +185,10 @@ $GLOBALS['TCA']['tx_entity_domain_model_entity']['types']['Ps\EntityBicycleMarke
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Konfigurationsanpassungen von bestehenden Feldern
+$GLOBALS['TCA']['tx_entity_domain_model_entity']['ctrl']['searchFields'] .= ', tx_entitybicyclemarket_brand, tx_entitybicyclemarket_condition_description, tx_entitybicyclemarket_service_condition, tx_entitybicyclemarket_token';
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['ctrl']['label_userFunc'] = \Ps\Entity\Service\TcaService::class . '->getRecordTitle';
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['ctrl']['label_userFunc_options'] = [\Ps\EntityBicycleMarket\Domain\Model\Bicycle::class => \Ps\EntityBicycleMarket\Service\BicycleTcaService::class . '->getTitle'];
+
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['types']['Ps\EntityBicycleMarket\Domain\Model\Bicycle']['columnsOverrides']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
 	'listing' => [
 		'title' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.image.listing',
