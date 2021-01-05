@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market">
+	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market" target-language="de">
 		<header/>
 		<body>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle" resname="tx_entitybicyclemarket_domain_model_bicycle">
-				<source>Bicycle</source>
+				<target>Bicycle</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.extbase_type" resname="tx_entitybicyclemarket_domain_model_bicycle.extbase_type">
-				<source>Bicycle</source>
+				<target>Bicycle</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.brand" resname="tx_entitybicyclemarket_domain_model_bicycle.brand">
-				<source>Brand</source>
+				<target>Hersteller</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition">
-				<source>Condition</source>
+				<target>Zustand</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.new" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.new">
-				<source>New</source>
+				<target>Neu</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.as_new" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.as_new">
-				<source>As new</source>
+				<target>Neuwertig</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.used" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition.used">
-				<source>Used</source>
+				<target>Gebraucht</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.condition_description" resname="tx_entitybicyclemarket_domain_model_bicycle.condition_description">
-				<source>Condition Description</source>
+				<target>Zustand Beschreibung</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.service_condition" resname="tx_entitybicyclemarket_domain_model_bicycle.service_condition">
-				<source>Service Condition</source>
+				<target>Service Stand</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.frame_size" resname="tx_entitybicyclemarket_domain_model_bicycle.frame_size">
-				<source>Frame Size</source>
+				<target>Rahmengröße</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.wheel_size" resname="tx_entitybicyclemarket_domain_model_bicycle.wheel_size">
-				<source>Wheel Size</source>
+				<target>Laufradgröße</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.price" resname="tx_entitybicyclemarket_domain_model_bicycle.price">
-				<source>Price</source>
+				<target>Preis</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis" resname="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis">
-				<source>Price Negotiation Basis</source>
+				<target>Verhandlungsbasis</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee" resname="tx_entitybicyclemarket_domain_model_bicycle.manufacturer_guarantee">
-				<source>Manufacturer Guarantee</source>
+				<target>Herstellergarantie</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.token" resname="tx_entitybicyclemarket_domain_model_bicycle.token">
-				<source>Token</source>
+				<target>Token</target>
 			</trans-unit>
 
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.image.listing" resname="tx_entitybicyclemarket_domain_model_bicycle.image.listing">
-				<source>Listing</source>
+				<target>Auflistung</target>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.image.fullsize" resname="tx_entitybicyclemarket_domain_model_bicycle.image.fullsize">
-				<source>Fullsize</source>
+				<target>Detailansicht</target>
 			</trans-unit>
 		</body>
 	</file>

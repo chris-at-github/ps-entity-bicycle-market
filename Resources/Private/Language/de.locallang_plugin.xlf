@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:entity_bicycle_market/Resources/Private/Language/locallang_plugin" date="2020-12-28T12:32:45Z" product-name="entity_bicycle_market" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="frontend.name" resname="frontend.name">
+				<target>Radlbörse (Frontend)</target>
+			</trans-unit>
+			<trans-unit id="frontend.description" resname="frontend.description">
+				<target>Auflistung der gepflegten Radel aus der Radelbörse mit der einer Detail- und Anfrageseite.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
