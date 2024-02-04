@@ -12,6 +12,9 @@
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.brand" resname="tx_entitybicyclemarket_domain_model_bicycle.brand">
 				<target>Hersteller</target>
 			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.item_number" resname="tx_entitybicyclemarket_domain_model_bicycle.item_number">
+				<target>Artikelnummer</target>
+			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition" resname="tx_entitybicyclemarket_domain_model_bicycle.tx_entitybicyclemarket_condition">
 				<target>Zustand</target>
 			</trans-unit>
@@ -38,6 +41,9 @@
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.price" resname="tx_entitybicyclemarket_domain_model_bicycle.price">
 				<target>Preis</target>
+			</trans-unit>
+			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.discount_price" resname="tx_entitybicyclemarket_domain_model_bicycle.discount_price">
+				<source>Reduzierter Preis</source>
 			</trans-unit>
 			<trans-unit id="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis" resname="tx_entitybicyclemarket_domain_model_bicycle.price_negotiation_basis">
 				<target>Verhandlungsbasis</target>

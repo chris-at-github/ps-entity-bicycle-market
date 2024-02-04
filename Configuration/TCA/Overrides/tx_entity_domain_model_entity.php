@@ -10,7 +10,7 @@ if(isset($GLOBALS['TCA']['tx_entity_domain_model_entity']['columns']['tx_extbase
 // ---------------------------------------------------------------------------------------------------------------------
 // Neue Paletten
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_general'] = [
-	'showitem' => 'title, --linebreak--, tx_entitybicyclemarket_brand, --linebreak--, media, '
+	'showitem' => 'title, --linebreak--, tx_entitybicyclemarket_brand, tx_entitybicyclemarket_item_number, --linebreak--, long_description, --linebreak--, media, '
 ];
 
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_condition'] = [
@@ -22,7 +22,7 @@ $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_size'] = [
 ];
 
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_price'] = [
-	'showitem' => 'tx_entitybicyclemarket_price_negotiation_basis, tx_entitybicyclemarket_price,'
+	'showitem' => 'tx_entitybicyclemarket_price_negotiation_basis, tx_entitybicyclemarket_price, tx_entitybicyclemarket_discount_price,'
 ];
 
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_guarantee'] = [
@@ -44,6 +44,15 @@ $tmpEntityBicycleMarketColumns = [
 	'tx_entitybicyclemarket_brand' => [
 		'exclude' => true,
 		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.brand',
+		'config' => [
+			'type' => 'input',
+			'size' => 40,
+			'eval' => 'trim'
+		],
+	],
+	'tx_entitybicyclemarket_item_number' => [
+		'exclude' => true,
+		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.item_number',
 		'config' => [
 			'type' => 'input',
 			'size' => 40,
@@ -106,8 +115,8 @@ $tmpEntityBicycleMarketColumns = [
 		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.frame_size',
 		'config' => [
 			'type' => 'input',
-			'size' => 4,
-			'eval' => 'int'
+			'size' => 40,
+			'eval' => 'trim',
 		]
 	],
 	'tx_entitybicyclemarket_wheel_size' => [
@@ -122,6 +131,16 @@ $tmpEntityBicycleMarketColumns = [
 	'tx_entitybicyclemarket_price' => [
 		'exclude' => true,
 		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.price',
+		'config' => [
+			'type' => 'input',
+			'size' => 40,
+			'eval' => 'double2'
+		],
+		'displayCond' => 'FIELD:tx_entitybicyclemarket_price_negotiation_basis:!=:1',
+	],
+	'tx_entitybicyclemarket_discount_price' => [
+		'exclude' => true,
+		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.discount_price',
 		'config' => [
 			'type' => 'input',
 			'size' => 40,
