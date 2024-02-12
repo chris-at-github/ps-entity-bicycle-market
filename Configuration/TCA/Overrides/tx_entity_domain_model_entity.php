@@ -124,7 +124,7 @@ $tmpEntityBicycleMarketColumns = [
 		'label' => 'LLL:EXT:entity_bicycle_market/Resources/Private/Language/locallang_tca.xlf:tx_entitybicyclemarket_domain_model_bicycle.wheel_size',
 		'config' => [
 			'type' => 'input',
-			'size' => 4,
+			'size' => 40,
 			'eval' => 'int'
 		]
 	],

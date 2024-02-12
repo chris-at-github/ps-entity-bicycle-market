@@ -9,16 +9,12 @@
         <f:render section="Header" arguments="{bicycle: bicycle}" />
       </header>
 
-      <div class="bicycle-modal--price">
-        <f:render section="Price" arguments="{bicycle: bicycle}" />
-      </div>
-
       <div class="bicycle-modal--properties">
-        <div class="row">
-          <f:render section="Condition" arguments="{bicycle: bicycle}" />
-          <f:render section="Service" arguments="{bicycle: bicycle}" />
-          <f:render section="Size" arguments="{bicycle: bicycle}" />
-        </div>
+        <f:render section="Price" arguments="{bicycle: bicycle}" />
+        <f:render section="Condition" arguments="{bicycle: bicycle}" />
+        <f:render section="LongDescription" arguments="{bicycle: bicycle}" />
+        <f:render section="Service" arguments="{bicycle: bicycle}" />
+        <f:render section="Size" arguments="{bicycle: bicycle}" />
       </div>
     </div>
 
@@ -72,7 +68,11 @@
         <div class="bicycle-modal--title">{bicycle.title}</div>
 
         <f:if condition="{bicycle.brand}">
-          <div class="bicycle-modal-brand">{bicycle.brand}</div>
+          <div class="bicycle-modal--brand">{bicycle.brand}</div>
+        </f:if>
+
+        <f:if condition="{bicycle.itemNumber}">
+          <div class="bicycle-modal--item-number"><f:translate key="bicycle.itemNumber" /> {bicycle.itemNumber}</div>
         </f:if>
       </div>
 
@@ -84,50 +84,78 @@
 
   <f:section name="Condition">
     <f:if condition="{bicycle.condition}">
-      <div class="col-12 col-sm-4 col-lg-3 bicycle-modal--property-title"><f:translate key="bicycle.condition" /></div>
-      <div class="col-12 col-sm-8 col-lg-9 bicycle-modal--property-value">
-        <f:translate key="bicycle.condition.{bicycle.condition}" />
+      <div class="bicycle-modal--property">
+        <div class="bicycle-modal--property-title"><f:translate key="bicycle.condition" /></div>
+        <div class="bicycle-modal--property-value bicycle-modal--property-value-large">
+          <f:translate key="bicycle.condition.{bicycle.condition}" />
+        </div>
+
         <f:if condition="{bicycle.conditionDescription}">
-          <f:format.html>{bicycle.conditionDescription}</f:format.html>
+          <div class="bicycle-modal--property-value bicycle-modal--property-value-html">
+            <f:format.html>{bicycle.conditionDescription}</f:format.html>
+          </div>
         </f:if>
+      </div>
+    </f:if>
+  </f:section>
+
+  <f:section name="LongDescription">
+    <f:if condition="{bicycle.longDescription}">
+      <div class="bicycle-modal--property">
+        <div class="bicycle-modal--property-title"><f:translate key="bicycle.longDescription" /></div>
+        <div class="bicycle-modal--property-value bicycle-modal--property-value-html">
+          <f:format.html>{bicycle.longDescription}</f:format.html>
+        </div>
       </div>
     </f:if>
   </f:section>
 
   <f:section name="Service">
     <f:if condition="{bicycle.serviceCondition}">
-      <div class="col-12 col-sm-4 col-lg-3 bicycle-modal--property-title"><f:translate key="bicycle.serviceCondition" /></div>
-      <div class="col-12 col-sm-8 col-lg-9 bicycle-modal--property-value"><f:format.html>{bicycle.serviceCondition}</f:format.html></div>
+      <div class="bicycle-modal--property">
+        <div class="bicycle-modal--property-title"><f:translate key="bicycle.serviceCondition" /></div>
+        <div class="bicycle-modal--property-value bicycle-modal--property-value-html"><f:format.html>{bicycle.serviceCondition}</f:format.html></div>
+      </div>
     </f:if>
 
     <f:if condition="{bicycle.manufacturerGuarantee}">
-      <div class="col-12 col-sm-4 col-lg-3 bicycle-modal--property-title"><f:translate key="bicycle.manufacturerGuarantee" /></div>
-      <div class="col-12 col-sm-8 col-lg-9 bicycle-modal--property-value bicycle-modal--property-value-manufacturer-guarantee"><f:translate key="bicycle.manufacturerGuarantee.available" /></div>
+      <div class="bicycle-modal--property">
+        <div class="bicycle-modal--property-title"><f:translate key="bicycle.manufacturerGuarantee" /></div>
+        <div class="bicycle-modal--property-value bicycle-modal--property-value-large bicycle-modal--property-value-manufacturer-guarantee"><f:translate key="bicycle.manufacturerGuarantee.available" /></div>
+      </div>
     </f:if>
   </f:section>
 
   <f:section name="Price">
-    <f:if condition="{bicycle.priceNegotiationBasis}">
-      <f:then>
-        <div class="bicycle-modal--price-title"><f:translate key="bicycle.price" /></div>
-        <div class="bicycle-modal--price-value"><f:translate key="bicycle.priceNegotiationBasis" /></div>
-      </f:then>
-      <f:else if="{bicycle.price}">
-        <div class="bicycle-modal--price-title"><f:translate key="bicycle.price" /></div>
-        <div class="bicycle-modal--price-value"><f:format.currency currencySign="€">{bicycle.price}</f:format.currency></div>
-      </f:else>
-    </f:if>
+    <div class="bicycle-modal--price bicycle-modal--property">
+      <f:if condition="{bicycle.priceNegotiationBasis}">
+        <f:then>
+          <div class="bicycle-modal--price-title"><f:translate key="bicycle.price" /></div>
+          <div class="bicycle-modal--price-value"><f:translate key="bicycle.priceNegotiationBasis" /></div>
+        </f:then>
+        <f:else if="{bicycle.price}">
+          <div class="bicycle-modal--property-title bicycle-modal--price-title"><f:translate key="bicycle.price" /></div>
+          <div class="bicycle-modal--property-value bicycle-modal--property-value-large"><f:format.currency currencySign="€">{bicycle.price}</f:format.currency></div>
+        </f:else>
+      </f:if>
+    </div>
   </f:section>
 
   <f:section name="Size">
-    <f:if condition="{bicycle.frameSize}">
-      <div class="col-12 col-sm-4 col-lg-3 bicycle-modal--property-title"><f:translate key="bicycle.frameSize" /></div>
-      <div class="col-12 col-sm-8 col-lg-9 bicycle-modal--property-value">{bicycle.frameSize}"</div>
-    </f:if>
+    <div class="bicycle-modal--sizes">
+      <f:if condition="{bicycle.frameSize}">
+        <div class="bicycle-modal--size bicycle-modal--property">
+          <div class="bicycle-modal--property-title"><f:translate key="bicycle.frameSize" /></div>
+          <div class="bicycle-modal--property-value bicycle-modal--property-value-large">{bicycle.frameSize}</div>
+        </div>
+      </f:if>
 
-    <f:if condition="{bicycle.wheelSize}">
-      <div class="col-12 col-sm-4 col-lg-3 bicycle-modal--property-title"><f:translate key="bicycle.wheelSize" /></div>
-      <div class="col-12 col-sm-8 col-lg-9 bicycle-modal--property-value">{bicycle.wheelSize}"</div>
-    </f:if>
+      <f:if condition="{bicycle.wheelSize}">
+        <div class="bicycle-modal--size bicycle-modal--property">
+          <div class="bicycle-modal--property-title"><f:translate key="bicycle.wheelSize" /></div>
+          <div class="bicycle-modal--property-value bicycle-modal--property-value-large">{bicycle.wheelSize}"</div>
+        </div>
+      </f:if>
+    </div>
   </f:section>
 </html>

@@ -36,6 +36,9 @@ return [
 			'token' => [
 				'fieldName' => 'tx_entitybicyclemarket_token'
 			],
+			'itemNumber' => [
+				'fieldName' => 'tx_entitybicyclemarket_item_number'
+			],
 		]
 	],
 ];

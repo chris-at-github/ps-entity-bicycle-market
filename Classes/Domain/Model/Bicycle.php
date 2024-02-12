@@ -50,9 +50,9 @@ class Bicycle extends \Ps\Entity\Domain\Model\Entity {
 	/**
 	 * frameSize
 	 *
-	 * @var int
+	 * @var string
 	 */
-	protected $frameSize = 0;
+	protected $frameSize = '';
 
 	/**
 	 * wheelSize
@@ -88,6 +88,11 @@ class Bicycle extends \Ps\Entity\Domain\Model\Entity {
 	 * @var string
 	 */
 	protected $token = '';
+
+	/**
+	 * @var string
+	 */
+	protected $itemNumber = '';
 
 	/**
 	 * Returns the brand
@@ -168,7 +173,7 @@ class Bicycle extends \Ps\Entity\Domain\Model\Entity {
 	/**
 	 * Returns the frameSize
 	 *
-	 * @return int $frameSize
+	 * @return string $frameSize
 	 */
 	public function getFrameSize() {
 		return $this->frameSize;
@@ -177,7 +182,7 @@ class Bicycle extends \Ps\Entity\Domain\Model\Entity {
 	/**
 	 * Sets the frameSize
 	 *
-	 * @param int $frameSize
+	 * @param string $frameSize
 	 * @return void
 	 */
 	public function setFrameSize($frameSize) {
@@ -290,5 +295,13 @@ class Bicycle extends \Ps\Entity\Domain\Model\Entity {
 	 */
 	public function setToken(string $token): void {
 		$this->token = $token;
+	}
+
+	public function getItemNumber(): string {
+		return $this->itemNumber;
+	}
+
+	public function setItemNumber(string $itemNumber): void {
+		$this->itemNumber = $itemNumber;
 	}
 }
