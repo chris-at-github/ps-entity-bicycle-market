@@ -34,12 +34,31 @@
 				}" />
 			</div>
 
-			<div class="bicycle-item--title">{bicycle.title}</div>
+			<div class="bicycle-item--footer">
+				<div class="bicycle-item--body">
+					<div class="bicycle-item--title">{bicycle.title}</div>
 
-			<f:if condition="{bicycle.brand}">
-				<div class="bicycle-item--brand">{bicycle.brand}</div>
-			</f:if>
+					<f:if condition="{bicycle.brand}">
+						<div class="bicycle-item--brand">{bicycle.brand}</div>
+					</f:if>
+				</div>
+				<div class="bicycle-item--price-container">
+					<f:render section="Price" arguments="{bicycle: bicycle}" />
+				</div>
+			</div>
 		</div>
+	</f:section>
+
+	<f:section name="Price">
+		<f:if condition="{bicycle.discountPrice}">
+			<f:then>
+				<div class="bicycle-item--price bicycle-item--price-original"><f:format.currency>{bicycle.price}</f:format.currency></div>
+				<div class="bicycle-item--price bicycle-item--price-current"><f:format.currency>{bicycle.discountPrice}</f:format.currency></div>
+			</f:then>
+			<f:else>
+				<div class="bicycle-item--price bicycle-item--price-current"><f:format.currency>{bicycle.price}</f:format.currency></div>
+			</f:else>
+		</f:if>
 	</f:section>
 
 	<f:section name="Modal">
@@ -49,8 +68,6 @@
 				<div role="dialog" aria-modal="true" class="modal"></div>
 			</div>
 		</div>
-
-
 	</f:section>
 
 	<f:section name="Modal-TEST">

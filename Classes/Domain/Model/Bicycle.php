@@ -69,6 +69,13 @@ class Bicycle extends \Ps\Entity\Domain\Model\Entity {
 	protected $price = 0.0;
 
 	/**
+	 * price
+	 *
+	 * @var float
+	 */
+	protected $discountPrice = 0.0;
+
+	/**
 	 * priceNegotiationBasis
 	 *
 	 * @var bool
@@ -303,5 +310,13 @@ class Bicycle extends \Ps\Entity\Domain\Model\Entity {
 
 	public function setItemNumber(string $itemNumber): void {
 		$this->itemNumber = $itemNumber;
+	}
+
+	public function getDiscountPrice(): float {
+		return $this->discountPrice;
+	}
+
+	public function setDiscountPrice(float $discountPrice): void {
+		$this->discountPrice = $discountPrice;
 	}
 }

@@ -133,6 +133,11 @@
           <div class="bicycle-modal--price-title"><f:translate key="bicycle.price" /></div>
           <div class="bicycle-modal--price-value"><f:translate key="bicycle.priceNegotiationBasis" /></div>
         </f:then>
+        <f:else if="{bicycle.discountPrice}">
+          <div class="bicycle-modal--property-title bicycle-modal--price-title"><f:translate key="bicycle.price" /></div>
+          <div class="bicycle-modal--property-value bicycle-modal--original-price"><f:format.currency currencySign="€">{bicycle.price}</f:format.currency></div>
+          <div class="bicycle-modal--property-value bicycle-modal--property-value-large"><f:format.currency currencySign="€">{bicycle.discountPrice}</f:format.currency></div>
+        </f:else>
         <f:else if="{bicycle.price}">
           <div class="bicycle-modal--property-title bicycle-modal--price-title"><f:translate key="bicycle.price" /></div>
           <div class="bicycle-modal--property-value bicycle-modal--property-value-large"><f:format.currency currencySign="€">{bicycle.price}</f:format.currency></div>
