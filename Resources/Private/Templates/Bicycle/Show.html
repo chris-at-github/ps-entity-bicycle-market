@@ -26,6 +26,12 @@
 
   <f:section name="Images">
     <div class="bicycle-modal--image">
+      <f:if condition="{bicycle.stickerCategory}">
+        <div class="bicycle-modal--sticker bicycle-modal--{bicycle.stickerCategory.identifier}">
+          <xo:svg.inline source="fileadmin/sticker/{bicycle.stickerCategory.identifier}.svg" />
+        </div>
+      </f:if>
+
       <div class="slider">
         <div class="slider--container">
           <f:for each="{bicycle.media}" as="image">

@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Ps\EntityBicycleMarket\Domain\Model;
 
+use Ps\Entity\Domain\Model\Category;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
 /***
  *
  * This file is part of the "Bicycle Market" Extension for TYPO3 CMS.
@@ -318,5 +321,25 @@ class Bicycle extends \Ps\Entity\Domain\Model\Entity {
 
 	public function setDiscountPrice(float $discountPrice): void {
 		$this->discountPrice = $discountPrice;
+	}
+
+	/**
+	 * @return Category|null
+	 */
+	public function getStickerCategory() {
+		$identifiers = [
+			'sticker-discount',
+			'sticker-new',
+			'sticker-top',
+		];
+
+		/** @var Category $category */
+		foreach($this->getCategories() as $category) {
+			if(in_array($category->getIdentifier(), $identifiers) === true) {
+				return $category;
+			}
+		}
+
+		return null;
 	}
 }

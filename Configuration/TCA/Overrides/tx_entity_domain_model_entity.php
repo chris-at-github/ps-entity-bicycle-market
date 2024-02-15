@@ -33,6 +33,10 @@ $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_token'] = 
 	'showitem' => 'tx_entitybicyclemarket_token,'
 ];
 
+$GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_categories'] = [
+	'showitem' => 'categories,'
+];
+
 $GLOBALS['TCA']['tx_entity_domain_model_entity']['palettes']['bicycle_hidden'] = [
 	'showitem' => 'language, extended, slug',
 	'isHiddenPalette' => 1
@@ -198,6 +202,8 @@ $GLOBALS['TCA']['tx_entity_domain_model_entity']['types']['Ps\EntityBicycleMarke
 	--palette--;;bicycle_guarantee,
 	--palette--;;bicycle_token,
 	--palette--;;bicycle_hidden,
+--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+	--palette--;;bicycle_categories,
 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
 	--palette--;;access,
 ';

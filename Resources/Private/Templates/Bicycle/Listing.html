@@ -23,6 +23,12 @@
 	<f:section name="Item">
 		<div class="bicycle-item" data-target-uri="{f:uri.action(action: 'show', arguments: '{bicycle: bicycle}', pageUid: settings.showPageUid, pageType: settings.fetchRequestTypeNum)}" title="{f:translate(key: 'item.title', arguments: {0: bicycle.title})}">
 			<div class="bicycle-item--image">
+				<f:if condition="{bicycle.stickerCategory}">
+					<div class="bicycle-item--sticker bicycle-item--{bicycle.stickerCategory.identifier}">
+						<xo:svg.inline source="fileadmin/sticker/{bicycle.stickerCategory.identifier}.svg" />
+					</div>
+				</f:if>
+
 				<f:render partial="Components/Media" section="Picture" arguments="{
 					file: bicycle.media.0,
 					image: {maxWidth: 700, cropVariant: 'listing', title: '{f:translate(key: \'item.title\', arguments: {0: bicycle.title})}'},
