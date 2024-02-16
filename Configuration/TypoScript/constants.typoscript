@@ -29,5 +29,8 @@ plugin.tx_entitybicyclemarket {
 
 		# cat=plugin.tx_entitybicyclemarket//a; type=string; label=UID of tt_address record for contact data on request page
 		contactAddressUid =
+
+		# cat=plugin.tx_entitybicyclemarket//a; type=string; label=UID of tt_content record with the form plugin
+		formContentUid =
 	}
 }

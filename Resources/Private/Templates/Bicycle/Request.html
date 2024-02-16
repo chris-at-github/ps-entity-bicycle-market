@@ -31,6 +31,12 @@
               <div class="bicycle-request--property-value"><f:translate key="bicycle.priceNegotiationBasis" /></div>
             </div>
           </f:then>
+          <f:else if="{bicycle.discountPrice}">
+            <div class="bicycle-request--property">
+              <div class="bicycle-request--property-title"><f:translate key="bicycle.price" /></div>
+              <div class="bicycle-request--property-value"><f:format.currency currencySign="€">{bicycle.discountPrice}</f:format.currency></div>
+            </div>
+          </f:else>
           <f:else if="{bicycle.price}">
             <div class="bicycle-request--property">
               <div class="bicycle-request--property-title"><f:translate key="bicycle.price" /></div>
@@ -57,13 +63,24 @@
 
     <div class="row">
       <div class="col-12 col-sm-8 col-md-7">
-        <f:cObject typoscriptObjectPath="block.requestForm" />
+        <f:cObject typoscriptObjectPath="block.requestForm" data="{settings.formContentUid}" />
       </div>
 
-      <div class="col-12 col-md-5 col-lg-4 bicycle-request--contact-phone">
+      <div class="col-12 col-md-5 col-lg-5 bicycle-request--contact-phone">
         <header class="bicycle-request--contact-phone-header"><f:translate key="request.phone.header" /></header>
         <div class="bicycle-request--contact-phone-number"><a href="{xo:uri.phone(phone: address.phone)}">{address.phone}</a></div>
-        <div class="bicycle-request--contact-phone-description"><f:format.raw><f:translate key="request.phone.description" arguments="{0: bicycle.token}" /></f:format.raw></div>
+
+        <div class="bicycle-request--contact-phone-description">
+          <f:if condition="{bicycle.itemNumber}">
+            <f:then>
+              <f:format.raw><f:translate key="request.phone.description-itemnumber" arguments="{0: bicycle.itemNumber}" /></f:format.raw>
+            </f:then>
+            <f:else>
+              <f:format.raw><f:translate key="request.phone.description-token" arguments="{0: bicycle.token}" /></f:format.raw>
+            </f:else>
+          </f:if>
+        </div>
+
       </div>
     </div>
   </f:section>

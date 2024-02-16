@@ -9,6 +9,19 @@
 			<trans-unit id="frontend.description" resname="frontend.description">
 				<target>Auflistung der gepflegten Radel aus der Radelbörse mit der einer Detail- und Anfrageseite.</target>
 			</trans-unit>
+
+			<trans-unit id="flexform.sheet.main">
+				<source>Main</source>
+			</trans-unit>
+			<trans-unit id="flexform.field.show-page-uid">
+				<source>Seiten Uid für die Detailseite</source>
+			</trans-unit>
+			<trans-unit id="flexform.field.request-page-uid">
+				<source>Seiten Uid für die Anfrageseite</source>
+			</trans-unit>
+			<trans-unit id="flexform.field.form-content-uid">
+				<source>Content Uid für das Anfrageformular</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

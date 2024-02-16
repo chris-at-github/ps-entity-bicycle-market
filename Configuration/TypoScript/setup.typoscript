@@ -33,12 +33,14 @@ plugin.tx_entitybicyclemarket {
 		requestPageUid = {$plugin.tx_entitybicyclemarket.settings.requestPageUid}
 		fetchRequestTypeNum = {$plugin.tx_entitybicyclemarket.settings.fetchRequestTypeNum}
 		contactAddressUid = {$plugin.tx_entitybicyclemarket.settings.contactAddressUid}
+		formContentUid = {$plugin.tx_entitybicyclemarket.settings.formContentUid}
 	}
 }
 
 block.requestForm = RECORDS
 block.requestForm {
-	source = 88
+	source.data = current:1
+	source.intval = 1
 	dontCheckPid = 1
 	tables = tt_content
 }

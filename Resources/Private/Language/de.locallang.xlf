@@ -67,7 +67,10 @@
 			<trans-unit id="request.phone.header" resname="request.phone.header">
 				<target>Oder direkt per Telefon</target>
 			</trans-unit>
-			<trans-unit id="request.phone.description" resname="request.phone.description">
+			<trans-unit id="request.phone.description-itemnumber" resname="request.phone.description">
+				<target><![CDATA[Bitte geben sie hier zur eindeutigen Zuordnung die Artikelnummer <strong>%s</strong> an.]]></target>
+			</trans-unit>
+			<trans-unit id="request.phone.description-token" resname="request.phone.description">
 				<target><![CDATA[Bitte geben sie hier zur eindeutigen Zuordnung den Token <strong>%s</strong> an.]]></target>
 			</trans-unit>
 		</body>

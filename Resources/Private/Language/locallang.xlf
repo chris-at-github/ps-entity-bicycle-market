@@ -70,8 +70,11 @@
 			<trans-unit id="request.phone.header" resname="request.phone.header">
 				<source>Directly by phone</source>
 			</trans-unit>
-			<trans-unit id="request.phone.description" resname="request.phone.description">
+			<trans-unit id="request.phone.description-itemnumber" resname="request.phone.description-itemnumber">
 				<source><![CDATA[Please tell us the token <strong>%s</strong> for identification.]]></source>
+			</trans-unit>
+			<trans-unit id="request.phone.description-token" resname="request.phone.description-token">
+				<source><![CDATA[Please tell us the item number <strong>%s</strong> for identification.]]></source>
 			</trans-unit>
 		</body>
 	</file>

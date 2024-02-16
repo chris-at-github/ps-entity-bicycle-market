@@ -9,6 +9,19 @@
 			<trans-unit id="frontend.description" resname="frontend.description">
 				<source></source>
 			</trans-unit>
+
+			<trans-unit id="flexform.sheet.main">
+				<source>Main</source>
+			</trans-unit>
+			<trans-unit id="flexform.field.show-page-uid">
+				<source>Show Page Uid</source>
+			</trans-unit>
+			<trans-unit id="flexform.field.request-page-uid">
+				<source>Request Page Uid</source>
+			</trans-unit>
+			<trans-unit id="flexform.field.form-content-uid">
+				<source>Form Content Uid</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
