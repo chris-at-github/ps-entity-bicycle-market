@@ -21,7 +21,6 @@
 	</f:section>
 
 	<f:section name="Item">
-
 		<div class="bicycle-item" data-target-uri="{f:uri.action(action: 'show', arguments: '{bicycle: bicycle}', pageUid: settings.showPageUid, pageType: settings.fetchRequestTypeNum)}" title="{f:translate(key: 'item.title', arguments: {0: bicycle.title})}">
 			<div class="bicycle-item--image">
 				<f:if condition="{bicycle.stickerCategory}">
@@ -42,7 +41,7 @@
 			</div>
 
 			<div class="bicycle-item--footer">
-				<div class="bicycle-item--body">{settings.showPageUid}
+				<div class="bicycle-item--body">
 					<div class="bicycle-item--title">{bicycle.title}</div>
 
 					<f:if condition="{bicycle.brand}">

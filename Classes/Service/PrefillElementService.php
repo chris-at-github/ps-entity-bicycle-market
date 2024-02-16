@@ -27,7 +27,7 @@ class PrefillElementService {
 				/** @var Bicycle $bicycle */
 				$bicycle = $objectManager->get(BicycleRepository::class)->findByUid((int) $request['bicycle']);
 
-				if($bicycle !== null && $renderable->getIdentifier() === 'token' && $bicycle->getItemNumber() === '') {
+				if($bicycle !== null && $renderable->getIdentifier() === 'token') {
 					$renderable->setDefaultValue($bicycle->getToken());
 				}
 
