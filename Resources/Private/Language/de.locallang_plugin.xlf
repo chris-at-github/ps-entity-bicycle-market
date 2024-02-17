@@ -11,16 +11,16 @@
 			</trans-unit>
 
 			<trans-unit id="flexform.sheet.main">
-				<source>Main</source>
+				<target>Main</target>
 			</trans-unit>
 			<trans-unit id="flexform.field.show-page-uid">
-				<source>Seiten Uid für die Detailseite</source>
+				<target>Seiten Uid für die Detailseite</target>
 			</trans-unit>
 			<trans-unit id="flexform.field.request-page-uid">
-				<source>Seiten Uid für die Anfrageseite</source>
+				<target>Seiten Uid für die Anfrageseite</target>
 			</trans-unit>
 			<trans-unit id="flexform.field.form-content-uid">
-				<source>Content Uid für das Anfrageformular</source>
+				<target>Content Uid für das Anfrageformular</target>
 			</trans-unit>
 		</body>
 	</file>
